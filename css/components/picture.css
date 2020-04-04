@@ -1,0 +1,16 @@
+.picture {
+  min-width: 50%;
+  width: 50%;
+  height: 100vh;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../../images/bg1.jpg');
+}
+
+@media screen and (max-width: 1200px) {
+  .picture {
+    width: 100%;
+  }
+}

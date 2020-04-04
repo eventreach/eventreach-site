@@ -1,0 +1,34 @@
+.logo {
+  font-family: 'Archivo Black';
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: bold;
+  color: #3F51B5;
+  height: 30px;
+  width: 100px;
+  text-transform: uppercase;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  /* background-image: url('../images/logo.svg'); */
+}
+
+.logo.logo_md {
+  display: none;
+  margin: auto;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    margin: auto;
+  }
+}

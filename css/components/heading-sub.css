@@ -1,0 +1,17 @@
+.heading-sub {
+  font-family: 'Roboto Mono';
+  font-size: 15px;
+  line-height: 18px;
+  margin-top: 0;
+  margin-bottom: 70px;
+  font-weight: normal;
+  color: #333;
+}
+
+@media screen and (max-width: 767px) {
+  .heading-sub {
+    font-size: 15px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}

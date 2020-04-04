@@ -1,0 +1,25 @@
+.heading {
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 33px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+  .heading {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .heading {
+    text-align: center;
+    font-size: 26px;
+    line-height: 35px;
+  }
+}
