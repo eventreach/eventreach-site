@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> EventReach - AI Recommended events helping companies increase their reach. </title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black:400&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overhang@1.0.5/dist/overhang.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400&display=swap">
     <link rel='stylesheet' href='css/main.css'>
   </head>
@@ -80,9 +81,9 @@
             <div class="row">
               <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="footer__links footer__links_active">
-                  <a target="_blank" href="https://twitter.com/itmeohq" class="footer__link" style="--link-index: 1;">Twitter</a>
-                  <a target="_blank" href="https://www.facebook.com/itmeocom" class="footer__link" style="--link-index: 2;">Facebook</a>
-                  <a target="_blank" href="https://www.instagram.com/itmeohq" class="footer__link" style="--link-index: 3;">Instagram</a>
+                  <a target="_blank" href="mailto:info@eventreach.co?Subject=Hello" class="footer__link" style="--link-index: 1;">info@eventreach.co</a>
+                  <!-- <a target="_blank" href="https://www.facebook.com/itmeocom" class="footer__link" style="--link-index: 2;">Facebook</a> -->
+                  <!-- <a target="_blank" href="https://www.instagram.com/itmeohq" class="footer__link" style="--link-index: 3;">Instagram</a> -->
                 </div>
               </div>
             </div>
@@ -92,9 +93,11 @@
 
     </div>
 
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/overhang@1.0.5/dist/overhang.min.js"></script>
 
 <!-- <script type="text/javascript">
 
@@ -175,7 +178,7 @@
     });
 
 </script> -->
-<script>
+<!-- <script>
   const firstFormScriptURL = 'https://script.google.com/macros/s/AKfycby1GOW595vokz8GkSNfpFgkWPo8D9d7JcebN4GvhqssaDvOHUc/exec'
   const firstForm = document.forms['mc-embedded-subscribe-form']
 
@@ -183,14 +186,16 @@
     e.preventDefault()
     fetch(firstFormScriptURL, { method: 'POST', body: new FormData(firstForm)})
       .then(response => console.log('Success!', response)).then(
-        swal({
-  text: "Thank you for subscribing!",
-})).then(firstForm.reset())
+        $("body").overhang({
+  type: "success",
+  message: "Woohoo! Our message works!"
+})
+).then(firstForm.reset())
       .catch(error => console.error('Error!', error.message))
   })
 
   
-</script>
+</script> -->
     
   </body>
 </html>
