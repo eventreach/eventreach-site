@@ -94,8 +94,9 @@
 
     <script src="js/main.js"></script>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 
     $(document).ready(function(){
         ajaxMailChimpForm($("#subscribe-form"), $("#subscribe-result"));
@@ -173,6 +174,22 @@
 
     });
 
+</script> -->
+<script>
+  const firstFormScriptURL = 'https://script.google.com/macros/s/AKfycby1GOW595vokz8GkSNfpFgkWPo8D9d7JcebN4GvhqssaDvOHUc/exec'
+  const firstForm = document.forms['mc-embedded-subscribe-form']
+
+  firstForm.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(firstFormScriptURL, { method: 'POST', body: new FormData(firstForm)})
+      .then(response => console.log('Success!', response)).then(
+        swal({
+  text: "Thank you for subscribing!",
+})).then(firstForm.reset())
+      .catch(error => console.error('Error!', error.message))
+  })
+
+  
 </script>
     
   </body>
